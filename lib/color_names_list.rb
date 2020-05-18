@@ -10,21 +10,21 @@ module ColorNamesList
 
   class << self
 
-    $data = YAML.load_file("#{__dir__}/data/color_names.yml");
-    
+    @@data = YAML.load_file("#{__dir__}/data/color_names.yml");
+
     def show_raw_data
-      return $data
+      return @@data
     end
 
     def show_random
-     color = $data.sample
+     color = @@data.sample
      color = color[:name]
     end
 
     def show_color_name(symbols_from_input)
       symbols_from_input = normalized_color(symbols_from_input)
       if !!(symbols_from_input =~ SIX_DIGIT_HEX_COLOR_REGEX)
-        color = $data.select{|key, hash| key[:hex] == symbols_from_input }
+        color = @@data.select{|key, hash| key[:hex] == symbols_from_input }
         begin
           color[0][:name]
         rescue

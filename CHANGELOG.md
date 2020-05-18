@@ -9,5 +9,6 @@
 - Added method to show raw data.
 
 ## v0.1.2
+## v0.1.3
 
-- Added method to show raw data.
+- Bug fixes
