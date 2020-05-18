@@ -10,6 +10,11 @@ module ColorNamesList
   class Error < StandardError; end
 
   class << self
+
+    def show_raw_data
+      return $data
+    end
+
     def show_random
      color = $data.sample
      color = color[:name]
