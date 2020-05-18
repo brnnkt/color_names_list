@@ -1,7 +1,6 @@
 require "color_names_list/version"
 require 'yaml'
 
-$data = YAML.load_file("#{__dir__}/data/color_names.yml");
 SIX_DIGIT_HEX_COLOR_REGEX = /^#([A-Fa-f0-9]{6})$/
 HEX_COLOR_REGEX = /^([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/
 
@@ -11,6 +10,8 @@ module ColorNamesList
 
   class << self
 
+    $data = YAML.load_file("#{__dir__}/data/color_names.yml");
+    
     def show_raw_data
       return $data
     end

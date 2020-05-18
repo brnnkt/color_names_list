@@ -7,3 +7,7 @@
 ## v0.1.1
 
 - Added method to show raw data.
+
+## v0.1.2
+
+- Added method to show raw data.
